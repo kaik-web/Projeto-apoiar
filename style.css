@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+ /* Importa a fonte 'gothic special' do Google Fonts para ser usada na página. */
+
+* {
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento, evitando quebras de layout. */
+}
+
+:root {
+    --primary-color: #4A6D7C;   /* Define uma variável para a cor primária (um azul-ardósia elegante). */
+    --secondary-color: hsl(277, 49%, 45%); /* Define uma variável para a cor secundária (usada para texto principal). */
+    --tertiary-color: hsl(344, 6%, 63%);  /* Define uma variável para a cor terciária (usada para placeholders e textos de apoio). */
+    --bg-color: #202124;        /* Define uma variável para a cor de fundo principal da página. */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do navegador para o corpo da página. */
+    color: var(--secondary-color); /* Define a cor padrão do texto usando a variável --secondary-color. */
+    font-family: "Roboto", sans-serif; /* Define uma fonte padrão e confiável. */
+    min-height: 100vh;
+    /* Adiciona uma camada escura sobre a imagem para reduzir o brilho e melhorar o contraste */
+    background-image: linear-gradient(rgba(32, 33, 36, 0.6), rgba(32, 33, 36, 0.6)), url('https://blog.hospitalpilar.com.br/wp-content/uploads/2021/08/Depositphotos_202821640_xl-2015-scaled.jpg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+}
+
+header {
+    padding: 1.5rem 2rem; /* Adiciona espaço acima e abaixo do título. */
+    background: transparent; /* Garante que não haja cor de fundo. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Adiciona um espaço entre o título e o aviso */
+}
+
+.header-title-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Espaço entre o logo e o título */
+    flex-wrap: wrap; /* Permite que o título quebre em telas menores */
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamanho grande para o título principal. */
+    color: white; /* Cor do texto branca. */
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade sobre a imagem. */
+    text-align: center;
+}
+
+main {
+    max-width: 80rem; /* Limita a largura máxima da área de conteúdo principal para melhor legibilidade. */
+    margin: 0 auto; /* Centraliza a área de conteúdo principal na página. */
+    padding-top: 1rem; /* Adiciona um pequeno espaço para não colar no título. */
+    padding-bottom: 4rem; /* Adiciona um espaço de respiro no final da página. */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start; /* Impede que os cards se estiquem para a mesma altura */
+}
+
+article {
+    margin-bottom: 1.25rem; /* Adiciona um espaço abaixo de cada artigo. */
+    box-shadow: none; /* Remove qualquer sombra. */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Animação suave para mudanças de cor. */
+    background-color: rgba(32, 33, 36, 0.9); /* Fundo escuro semi-transparente para legibilidade */
+    width: 300px; /* Define uma largura fixa para os cards ficarem lado a lado */
+    border-radius: 8px;
+    border: 1px solid #3c4043;
+    overflow: hidden; /* Garante que a imagem não vaze das bordas arredondadas */
+    padding: 0;
+}
+
+article:hover {
+    transform: scale(1.01); /* Aumenta levemente o tamanho do artigo para dar um feedback visual. */
+    cursor: pointer; /* Transforma o cursor em uma "mãozinha" para indicar que é um item interativo. */
+    border-color: #4A6D7C;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initials {
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+}
+
+article h2 {
+    margin-top: 0; /* Remove a margem do topo do título do artigo. */
+    font-weight: 600;
+    font-size: 2rem; /* Aumenta o tamanho do nome para destaque. */
+    border-bottom: none; /* Remove qualquer linha abaixo do título. */
+    padding-bottom: 0; /* Remove qualquer espaçamento interno abaixo do título. */
+    margin-bottom: 0.25rem; /* Adiciona um pequeno espaço abaixo do título. */
+    color: white; /* Define a cor do nome como branco para melhor legibilidade. */
+}
+
+article p {
+    margin: 0.5rem 0; /* Adiciona margens verticais ao parágrafo. */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para facilitar a leitura. */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte da história. */
+    margin-bottom: 0.5rem; /* Adiciona um espaço abaixo do parágrafo. */
+    color: #bdc1c6; /* Cor cinza claro para boa leitura. */
+}
+
+article p strong {
+    color: var(--tertiary-color); /* Define uma cor diferente para o texto em negrito (<strong>). */
+    font-weight: 400; /* Define o peso da fonte para o texto em negrito. */
+}
+
+.btn-ajuda {
+    display: inline-block;
+    color: var(--primary-color); /* Define a cor do link. */
+    text-decoration: none; /* Remove a linha sublinhada padrão dos links. */
+    font-weight: 500; /* Define o peso da fonte do link como médio. */
+    font-size: 1.1rem; /* Define um tamanho de fonte para o link de ajuda. */
+    font-family: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-ajuda:hover {
+    text-decoration: underline; /* Adiciona um sublinhado quando o mouse passa sobre o link. */
+}
+
+.pix-info {
+    font-size: 1.1rem;
+    color: #f1f3f4;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; /* Começa escondido */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.modal-image, .modal-content .card-image-placeholder {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    color: white;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #bdc1c6;
+}
+
+.modal-ajuda-container {
+    margin-top: 2rem;
+}
+
+.footer {
+    width: 100%;
+    background-color: transparent; /* Remove o fundo do rodapé */
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.footer-location {
+    color: #9aa0a6; /* Define a cor do texto para a localização. */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do texto de localização. */
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #bdc1c6; /* Cinza claro para boa legibilidade */
+    text-align: center;
+    margin: 0;
+    max-width: 350px; /* Aumenta a largura máxima para o texto não quebrar em telas maiores */
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista de links. */
+    display: flex; /* Ativa o modo de layout flexbox. */
+    justify-content: center; /* Centraliza o botão principal */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 0;
+    margin: 0;
+    position: relative; /* Necessário para posicionar o link de estudo */
+    height: 100%;
+}
+
+.study-link {
+    position: absolute;
+    left: 2rem; /* Distância da borda esquerda */
+    font-size: 0.8rem; /* Diminui um pouco para mais elegância */
+    color: #bdc1c6;
+    text-decoration: none;
+    border: 1px solid #5f6368; /* Borda sutil cinza escuro */
+    padding: 0.5rem 1rem;
+    border-radius: 50px; /* Formato de pílula para combinar com o outro botão */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-donation-link {
+    /* Estilo de botão para dar destaque */
+    background-color: rgba(83, 45, 130, 0.85); /* Roxo escuro com 85% de opacidade */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px; /* Bordas arredondadas para formato de pílula */
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte para maior destaque */
+    font-weight: 700; /* Deixa a fonte mais grossa (bold) */
+    text-decoration: none; /* Remove a linha sublinhada padrão. */
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Garante que o padding seja aplicado corretamente */
+}
+
+.study-link:hover {
+    background-color: #bdc1c6; /* Fundo cinza claro no hover */
+    color: #202124; /* Texto escuro para contraste */
+    border-color: #bdc1c6; /* Borda acompanha a cor de fundo */
+}
+
+.main-donation-link:hover {
+    background-color: rgb(83, 45, 130); /* Versão sólida do roxo para o hover */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+@media (max-width: 768px) {
+    header { /* Inicia um bloco de estilos para telas com largura máxima de 768px (tablets). */
+        flex-direction: column; /* Empilha os itens do cabeçalho verticalmente. */
+        padding: 1rem; /* Reduz o espaçamento interno do cabeçalho. */
+    }
+
+    header h1 { /* Estiliza o título principal em telas menores. */
+        text-align: center; /* Centraliza o texto do título. */
+        margin-bottom: 1rem; /* Adiciona um espaço abaixo do título. */
+    }
+
+    div input { /* Estiliza o campo de busca em telas menores. */
+        width: 90vw; /* Faz o campo de busca ocupar 90% da largura da tela. */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do campo de busca. */
+    }
+
+    main { /* Estiliza a área de conteúdo principal em telas menores. */
+        padding: 0 1rem; /* Adiciona espaçamento nas laterais para evitar que o texto cole nas bordas. */
+    }
+
+    article:hover { /* Estiliza o efeito hover do artigo em telas menores. */
+        transform: none; /* Remove o efeito de zoom para melhorar a experiência em dispositivos de toque. */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 { /* Estiliza o título principal em telas com largura máxima de 480px (celulares). */
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do título. */
+        max-width: 70%; /* Limita a largura do título. */
+        word-wrap: break-word; /* Permite que palavras muito longas quebrem para a linha de baixo. */
+    }
+
+    div input, /* Estiliza o campo de busca e seu placeholder em telas muito pequenas. */
+    div input::placeholder {
+        font-size: 1rem; /* Reduz o tamanho da fonte para se ajustar melhor à tela. */
+    }
+
+    article h2 { /* Estiliza o título do artigo em telas muito pequenas. */
+        font-size: 1.3rem; /* Reduz o tamanho da fonte do título do artigo. */
+    }
+
+    div { /* Estiliza a div que contém o input e o botão em telas muito pequenas. */
+        display: flex; /* Ativa o modo de layout flexbox. */
+        align-items: center; /* Centraliza os itens horizontalmente. */
+        justify-content: center; /* Centraliza o conteúdo no espaço disponível. */
+        flex-direction: column; /* Empilha o input e o botão verticalmente. */
+        gap: 0.5rem; /* Adiciona um pequeno espaço entre o input e o botão. */
+    }
+
+    button { /* Estiliza o botão em telas muito pequenas. */
+        margin-top: 1rem; /* Adiciona um espaço acima do botão. */
+    }
+}

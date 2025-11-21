@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Apoiar</title>
+    <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/ph:hand-heart-duotone.svg?color=white">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-title-group">
+      <img src="https://api.iconify.design/ph:hand-heart-duotone.svg?color=white" alt="Logo do Projeto" class="header-logo">
+      <h1>Conectando Quem Quer Ajudar a Quem Precisa</h1>
+    </div>
+    <p class="disclaimer">Este projeto não possui nenhum fim financeiro para o criador dele.</p>
+  </header>
+  
+  <main> 
+    <section class="card-container"></section>
+  </main>
+  
+  <footer class="footer"> 
+    <ul class="footer-links">
+      <li><a href="https://www.alura.com.br/imersao-dev-google" class="study-link" target="_blank">base de estudo para o projeto</a></li>
+      <li><a href="https://www.vakinha.com.br/vaquinhas/mais-amadas" class="main-donation-link" target="_blank"><strong>para mais doações</strong></a></li>
+    </ul>
+  </footer>
+
+  <!-- Estrutura do Modal -->
+  <div class="modal-overlay" id="person-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Player de Música de Fundo -->
+  <audio id="background-music" loop src="https://cdn.pixabay.com/download/audio/2024/02/09/audio_c4d5c7564e.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
